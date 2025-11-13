@@ -37,6 +37,26 @@ class SelectionUtilsTest {
     }
 
     @Test
+    void getNthSmallestNumber_fixed_nZero() {
+        long[] numbers = {1L, 4L, 6L, 3L, 2L, 6L, 1L, 7L};
+        int n = 0;
+
+        Optional<Long> result = selectionUtils.getNthSmallestNumber(numbers, n);
+
+        assertFalse(result.isPresent());
+    }
+
+    @Test
+    void getNthSmallestNumber_fixed_nNegative() {
+        long[] numbers = {1L, 4L, 6L, 3L, 2L, 6L, 1L, 7L};
+        int n = -4;
+
+        Optional<Long> result = selectionUtils.getNthSmallestNumber(numbers, n);
+
+        assertFalse(result.isPresent());
+    }
+
+    @Test
     void getNthSmallestNumber_empty() {
         long[] numbers = {};
         int n = 2;

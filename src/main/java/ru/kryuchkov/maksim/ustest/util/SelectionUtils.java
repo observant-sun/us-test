@@ -12,7 +12,7 @@ public class SelectionUtils {
     private final Random random = new Random();
 
     public Optional<Long> getNthSmallestNumber(long[] numbers, int n) {
-        if (numbers == null || numbers.length < n) {
+        if (numbers == null || numbers.length < n || n < 1) {
             return Optional.empty();
         }
         if (n == 1) {
