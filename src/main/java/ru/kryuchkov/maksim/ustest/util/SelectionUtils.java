@@ -2,7 +2,6 @@ package ru.kryuchkov.maksim.ustest.util;
 
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.Random;

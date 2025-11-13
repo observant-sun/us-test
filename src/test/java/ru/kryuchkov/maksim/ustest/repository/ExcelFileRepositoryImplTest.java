@@ -1,6 +1,5 @@
 package ru.kryuchkov.maksim.ustest.repository;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import ru.kryuchkov.maksim.ustest.util.SelectionUtils;
@@ -18,7 +17,7 @@ class ExcelFileRepositoryImplTest {
 
     @Test
     void getNthNumber() throws IOException {
-        long[] numbers = {1L, 4L, 6L, 3L, 2L, 6L};
+        long[] numbers = {1L, 4L, 6L, 3L, 2L, 6L, 1L};
         int n = 3;
 
         Mockito.when(selectionUtils.getNthSmallestNumber(numbers, n)).thenReturn(Optional.of(2L));
