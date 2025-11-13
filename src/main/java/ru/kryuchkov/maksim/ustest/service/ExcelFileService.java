@@ -29,6 +29,7 @@ public class ExcelFileService {
             Optional<Long> numberOpt = excelFileRepository.getNthNumber(pathToFile, n);
             return mapToNthSmallestNumberDto(numberOpt.orElse(null));
         } catch (FileNotFoundException e) {
+            // можно было бы возвращать и 404 на ненайденный файл, а не 400
             throw new BadRequestException(e.getMessage());
         } catch (IOException e) {
             throw new RuntimeException(e);
